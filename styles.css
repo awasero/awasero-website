@@ -1,15 +1,145 @@
-/* Custom styles for Awasero */
+/* Awasero - Venture Software House
+   Design System: Neo-Sophisticated
+   Colors: Deep black with gold accents
+   Typography: Cormorant Garamond (display) + Space Grotesk (body)
+*/
 
-/* Font families */
-.font-playfair {
-  font-family: 'Playfair Display', serif;
+/* =========================================
+   CSS Variables
+   ========================================= */
+:root {
+  --color-gold: #C9A227;
+  --color-gold-light: #D4B84A;
+  --color-gold-dark: #8B7355;
+  --color-bg-primary: #050505;
+  --color-bg-secondary: #0a0a0a;
+  --color-bg-tertiary: #080808;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.05);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
 }
 
-/* Custom animations */
+/* =========================================
+   Base Styles
+   ========================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* =========================================
+   Typography
+   ========================================= */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* =========================================
+   Selection
+   ========================================= */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+}
+
+::-moz-selection {
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+}
+
+/* =========================================
+   Custom Scrollbar
+   ========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) var(--color-bg-primary);
+}
+
+/* =========================================
+   Noise Texture Overlay
+   ========================================= */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* =========================================
+   Canvas Background
+   ========================================= */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* =========================================
+   Animations
+   ========================================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -28,83 +158,440 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
 .animate-fade-in-delay-1 {
   opacity: 0;
-  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  animation: fadeIn 0.8s ease-out 0.15s forwards;
 }
 
 .animate-fade-in-delay-2 {
   opacity: 0;
-  animation: fadeIn 0.8s ease-out 0.4s forwards;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.45s forwards;
 }
 
-/* Selection colors */
-::selection {
-  background-color: #D4AF37;
-  color: #000000;
+.animate-fade-in-delay-4 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+.animate-fade-in-delay-5 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.75s forwards;
 }
 
-::-webkit-scrollbar-track {
-  background: #0A0A0A;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 5px;
+/* =========================================
+   Focus States
+   ========================================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #B8941F;
+/* =========================================
+   Navigation
+   ========================================= */
+#main-nav.scrolled {
+  background-color: rgba(5, 5, 5, 0.95);
 }
 
-/* Focus states */
-a:focus,
-button:focus {
-  outline: 2px solid #D4AF37;
-  outline-offset: 2px;
+.nav-link {
+  position: relative;
 }
 
-/* Letter spacing for headings */
-h1, h2, h3, h4 {
-  letter-spacing: -0.02em;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width var(--transition-normal);
 }
 
-/* Hover effects for cards */
-.group:hover {
-  transform: translateY(-2px);
-  transition: transform 0.3s ease;
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
-/* Background gradient overlay */
-.bg-gradient-overlay {
-  background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1), transparent 50%),
-              radial-gradient(ellipse at bottom right, rgba(26, 26, 46, 0.2), transparent 50%);
+/* =========================================
+   Mobile Menu
+   ========================================= */
+#mobile-menu {
+  transition: transform var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Mobile menu animation */
-.menu-open {
-  transform: translateX(0) !important;
+#mobile-menu.open {
+  transform: translateX(0);
 }
 
-/* Reduce motion for accessibility */
+.mobile-nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transform: translateX(-50%);
+  transition: width var(--transition-normal);
+}
+
+.mobile-nav-link:hover::before {
+  width: 100%;
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+  transition: all var(--transition-normal);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.btn-primary:hover::before {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  transition: all var(--transition-normal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+}
+
+/* =========================================
+   Cards
+   ========================================= */
+.card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-slow);
+}
+
+.card:hover {
+  border-color: rgba(201, 162, 39, 0.3);
+  transform: translateY(-4px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+  transform: scaleX(0);
+  transition: transform var(--transition-slow);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   Section Headers
+   ========================================= */
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  width: 3rem;
+  height: 1px;
+  background-color: rgba(201, 162, 39, 0.5);
+}
+
+/* =========================================
+   FAQ Accordion
+   ========================================= */
+details summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary + div {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* =========================================
+   Form Elements
+   ========================================= */
+input[type="email"],
+input[type="text"],
+textarea {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-normal);
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* =========================================
+   Team Member Cards
+   ========================================= */
+.team-card {
+  position: relative;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  opacity: 0.8;
+}
+
+.team-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: var(--color-bg-secondary);
+}
+
+/* =========================================
+   Decorative Elements
+   ========================================= */
+.decorative-line {
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(201, 162, 39, 0.3),
+    transparent
+  );
+}
+
+.decorative-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-gold);
+}
+
+/* =========================================
+   Gradient Text
+   ========================================= */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================
+   Shimmer Effect
+   ========================================= */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 162, 39, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* =========================================
+   Counter Animation
+   ========================================= */
+[data-count] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   Intersection Observer Animations
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* =========================================
+   Reduced Motion
+   ========================================= */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float {
+    animation: none;
+  }
+}
+
+/* =========================================
+   Print Styles
+   ========================================= */
+@media print {
+  .noise-overlay,
+  #bg-canvas,
+  nav,
+  #mobile-menu {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* =========================================
+   High Contrast Mode
+   ========================================= */
+@media (prefers-contrast: high) {
+  :root {
+    --color-gold: #FFD700;
+    --color-border: rgba(255, 255, 255, 0.2);
+  }
+
+  .noise-overlay {
+    display: none;
+  }
+}
+
+/* =========================================
+   Dark Mode (already dark, but ensuring)
+   ========================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
   }
 }
