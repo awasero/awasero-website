@@ -35,6 +35,27 @@
   <!-- Additional SEO -->
   <meta name="geo.region" content="VE-A">
   <meta name="geo.placename" content="Caracas">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="target" content="all">
+
+  <!-- Hreflang for language targeting -->
+  <link rel="alternate" hreflang="en" href="https://awasero.com/">
+  <link rel="alternate" hreflang="es" href="https://awasero.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://awasero.com/">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Awasero">
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#050505">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#050505">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +63,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Schema.org WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Awasero",
+    "alternateName": "Awasero Venture Software House",
+    "url": "https://awasero.com",
+    "description": "Venture software house partnering with non-technical founders through equity-based software development",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Awasero",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://awasero.com/logo.svg"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://awasero.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": ["en", "es"]
+  }
+  </script>
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
@@ -91,7 +141,112 @@
     "audience": {
       "@type": "Audience",
       "audienceType": "Non-technical startup founders with domain expertise"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Awasero Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MVP Development",
+            "description": "Rapid minimum viable product development for startup validation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Technical Co-Founder Services",
+            "description": "Full technical leadership and development team as equity partner"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI/ML Development",
+            "description": "Artificial intelligence and machine learning solutions for startups"
+          }
+        }
+      ]
     }
+  }
+  </script>
+
+  <!-- Schema.org ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Awasero",
+    "image": "https://awasero.com/og-image.png",
+    "url": "https://awasero.com",
+    "telephone": "",
+    "email": "hello@awasero.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Caracas",
+      "addressCountry": "VE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.4806,
+      "longitude": -66.9036
+    },
+    "priceRange": "Equity-based",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "15"
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://awasero.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Partners",
+        "item": "https://awasero.com/#partners"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Investors",
+        "item": "https://awasero.com/#investors"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Portfolio",
+        "item": "https://awasero.com/#portfolio"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "About",
+        "item": "https://awasero.com/#about"
+      }
+    ]
   }
   </script>
 
@@ -140,20 +295,81 @@
           "@type": "Answer",
           "text": "Awasero is headquartered in Caracas, Venezuela, with a distributed team working globally. We partner with founders from anywhere in the world."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I find a technical co-founder for my startup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instead of searching for an individual technical co-founder, you can partner with Awasero. We provide an entire technical team that acts as your technical co-founder, bringing experienced engineers, designers, and architects who work for equity in your company."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is equity-based software development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Equity-based software development is a partnership model where software developers build your product in exchange for company ownership rather than cash payment. This model aligns incentives between founders and developers, removes upfront capital barriers, and creates long-term partnerships focused on company success."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build an MVP with Awasero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MVP development typically takes 8-16 weeks depending on complexity. Our agile approach delivers working software in 2-week sprints, allowing you to validate assumptions and iterate quickly. We prioritize speed-to-market while building a foundation that can scale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Awasero help with AI and machine learning development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Awasero has extensive experience in AI/ML development. Our team includes specialists in machine learning, natural language processing, computer vision, and predictive analytics. We help non-technical founders build AI-powered products across industries including healthcare, finance, education, and logistics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does Awasero work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Awasero partners with founders across diverse industries including healthcare, fintech, education, logistics, legal tech, real estate, agriculture, and manufacturing. We look for founders with deep domain expertise in their industry who are solving meaningful problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between hiring developers and partnering with a venture software house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When you hire developers, you pay upfront costs, manage recruitment, and bear all the technical risk. Partnering with a venture software house like Awasero means no upfront costs, access to a complete technical team, aligned incentives through equity, and shared risk and reward in your company's success."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I apply to partner with Awasero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To apply for partnership, email partners@awasero.com with information about your background, industry expertise, the problem you're solving, and your vision for the company. Our team reviews applications and schedules discovery calls with founders who are a good fit."
+        }
       }
     ]
   }
   </script>
 </head>
 <body class="bg-[#050505] text-white antialiased overflow-x-hidden">
+  <!-- Skip to main content for accessibility -->
+  <a href="#hero" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#C9A227] focus:text-black">
+    Skip to main content
+  </a>
+
   <!-- Animated Background Canvas -->
-  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></canvas>
 
   <!-- Noise Texture Overlay -->
-  <div class="noise-overlay"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 transition-all duration-500" id="main-nav">
+  <nav class="fixed top-0 w-full z-50 transition-all duration-500" id="main-nav" role="navigation" aria-label="Main navigation">
     <div class="absolute inset-0 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5"></div>
     <div class="container mx-auto px-6 lg:px-12 py-5 relative">
       <div class="flex items-center justify-between">
@@ -216,7 +432,7 @@
   </div>
 
   <!-- Hero Section -->
-  <header class="relative min-h-screen flex items-center justify-center pt-20" id="hero">
+  <header class="relative min-h-screen flex items-center justify-center pt-20" id="hero" role="banner">
     <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505] z-10 pointer-events-none"></div>
 
     <!-- Decorative Elements -->
@@ -285,8 +501,11 @@
     </div>
   </header>
 
+  <!-- Main Content -->
+  <main role="main" id="main-content">
+
   <!-- Partners Section -->
-  <section id="partners" class="py-32 relative">
+  <section id="partners" class="py-32 relative" aria-labelledby="partners-heading">
     <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#080808] to-[#050505]"></div>
 
     <div class="container mx-auto px-6 lg:px-12 relative z-10">
@@ -297,7 +516,7 @@
           <span class="text-[#C9A227] text-sm tracking-[0.3em] uppercase font-body">For Founders</span>
           <div class="w-12 h-px bg-[#C9A227]/50"></div>
         </div>
-        <h2 class="font-display text-4xl md:text-6xl font-semibold mb-6">
+        <h2 id="partners-heading" class="font-display text-4xl md:text-6xl font-semibold mb-6">
           Partner With <span class="italic font-normal text-[#C9A227]">Awasero</span>
         </h2>
         <p class="font-body text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
@@ -970,6 +1189,101 @@
               </p>
             </div>
           </details>
+
+          <!-- FAQ Item 6 -->
+          <details class="group bg-[#0a0a0a] border border-white/5">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-body font-medium pr-6">How can I find a technical co-founder for my startup?</span>
+              <span class="text-[#C9A227] transform group-open:rotate-45 transition-transform duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="font-body text-white/60 text-sm leading-relaxed">
+                Instead of searching for an individual technical co-founder, you can partner with Awasero.
+                We provide an entire technical team that acts as your technical co-founder, bringing experienced
+                engineers, designers, and architects who work for equity in your company.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 7 -->
+          <details class="group bg-[#0a0a0a] border border-white/5">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-body font-medium pr-6">How long does it take to build an MVP?</span>
+              <span class="text-[#C9A227] transform group-open:rotate-45 transition-transform duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="font-body text-white/60 text-sm leading-relaxed">
+                MVP development typically takes 8-16 weeks depending on complexity. Our agile approach
+                delivers working software in 2-week sprints, allowing you to validate assumptions and
+                iterate quickly. We prioritize speed-to-market while building a foundation that can scale.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 8 -->
+          <details class="group bg-[#0a0a0a] border border-white/5">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-body font-medium pr-6">Can Awasero help with AI and machine learning?</span>
+              <span class="text-[#C9A227] transform group-open:rotate-45 transition-transform duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="font-body text-white/60 text-sm leading-relaxed">
+                Yes, Awasero has extensive experience in AI/ML development. Our team includes specialists
+                in machine learning, natural language processing, computer vision, and predictive analytics.
+                We help non-technical founders build AI-powered products across industries.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 9 -->
+          <details class="group bg-[#0a0a0a] border border-white/5">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-body font-medium pr-6">What industries does Awasero work with?</span>
+              <span class="text-[#C9A227] transform group-open:rotate-45 transition-transform duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="font-body text-white/60 text-sm leading-relaxed">
+                Awasero partners with founders across diverse industries including healthcare, fintech,
+                education, logistics, legal tech, real estate, agriculture, and manufacturing. We look
+                for founders with deep domain expertise who are solving meaningful problems.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 10 -->
+          <details class="group bg-[#0a0a0a] border border-white/5">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-body font-medium pr-6">How do I apply to partner with Awasero?</span>
+              <span class="text-[#C9A227] transform group-open:rotate-45 transition-transform duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="font-body text-white/60 text-sm leading-relaxed">
+                To apply for partnership, email partners@awasero.com with information about your background,
+                industry expertise, the problem you're solving, and your vision for the company. Our team
+                reviews applications and schedules discovery calls with founders who are a good fit.
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -1052,8 +1366,11 @@
     </div>
   </section>
 
+  </main>
+  <!-- End Main Content -->
+
   <!-- Footer -->
-  <footer class="py-16 bg-[#050505] border-t border-white/5">
+  <footer class="py-16 bg-[#050505] border-t border-white/5" role="contentinfo">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
