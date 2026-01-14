@@ -3,19 +3,414 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My dream website is a minimal, but sophisticated venture software house called awasero that enables ">
-  <title>site-si66qq</title>
+  <meta name="description" content="Awasero - Venture software house partnering with non-technical founders. We build equity-based software solutions for domain experts turning ideas into tech companies.">
+  <meta name="keywords" content="equity software development, venture software house, software developers for equity, startup technical co-founder, non-technical founder support, equity-based development, software development partnership">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://awasero.com/">
+  <meta property="og:title" content="Awasero - Venture Software House for Non-Technical Founders">
+  <meta property="og:description" content="Partner with expert software developers who work for equity. Transform your industry expertise into a tech company.">
+  <meta property="og:image" content="/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://awasero.com/">
+  <meta property="twitter:title" content="Awasero - Venture Software House">
+  <meta property="twitter:description" content="Expert software developers working for equity with non-technical founders">
+  
+  <title>Awasero - Venture Software House | Equity-Based Software Development for Founders</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Awasero",
+    "description": "Venture software house partnering with non-technical founders to build tech companies",
+    "url": "https://awasero.com",
+    "logo": "https://awasero.com/logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "",
+      "contactType": "Business Development",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/awasero",
+      "https://twitter.com/awasero"
+    ]
+  }
+  </script>
 </head>
-<body class="min-h-screen bg-white text-gray-900 antialiased">
-  <main class="flex min-h-screen flex-col items-center justify-center p-8">
-    <h1 class="text-4xl font-bold mb-4">site-si66qq</h1>
-    <p class="text-xl text-gray-600 mb-8">My dream website is a minimal, but sophisticated venture software house called awasero that enables </p>
-    <p class="text-sm text-gray-400">
-      Start chatting in boom.git to build your site
-    </p>
-  </main>
+<body class="min-h-screen bg-black text-white antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-lg z-50 border-b border-white/10">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold tracking-tight">
+          <span class="font-playfair text-[#D4AF37]">awasero</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#partners" class="text-sm font-light hover:text-[#D4AF37] transition-colors">Partners</a>
+          <a href="#investors" class="text-sm font-light hover:text-[#D4AF37] transition-colors">Investors</a>
+          <a href="#companies" class="text-sm font-light hover:text-[#D4AF37] transition-colors">Companies</a>
+          <a href="#about" class="text-sm font-light hover:text-[#D4AF37] transition-colors">About</a>
+          <a href="#contact" class="px-6 py-2 text-sm bg-[#D4AF37] text-black font-medium hover:bg-[#B8941F] transition-all transform hover:scale-105">
+            Start Building
+          </a>
+        </div>
+        <button class="md:hidden text-white" id="mobile-menu-toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform md:hidden">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="#partners" class="text-2xl font-light hover:text-[#D4AF37]">Partners</a>
+      <a href="#investors" class="text-2xl font-light hover:text-[#D4AF37]">Investors</a>
+      <a href="#companies" class="text-2xl font-light hover:text-[#D4AF37]">Companies</a>
+      <a href="#about" class="text-2xl font-light hover:text-[#D4AF37]">About</a>
+      <a href="#contact" class="px-8 py-3 text-lg bg-[#D4AF37] text-black font-medium">Start Building</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-black to-[#1A1A2E] opacity-90"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          Your Industry Expertise,
+          <span class="text-[#D4AF37] block mt-2">Our Technical Excellence</span>
+        </h1>
+        <p class="text-lg md:text-xl font-light text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-delay-1">
+          Awasero is a venture software house that partners with non-technical founders. 
+          We build your tech company in exchange for equity, turning domain experts into successful tech entrepreneurs.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-delay-2">
+          <a href="#contact" class="px-8 py-4 bg-[#D4AF37] text-black font-medium hover:bg-[#B8941F] transition-all transform hover:scale-105">
+            Become a Partner
+          </a>
+          <a href="#companies" class="px-8 py-4 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
+            View Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Partners Section -->
+  <section id="partners" class="py-24 bg-[#0A0A0A]">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          For Visionary <span class="text-[#D4AF37]">Partners</span>
+        </h2>
+        <p class="text-lg text-gray-400">
+          Are you a domain expert with a game-changing idea? We provide the technical expertise and development resources to build your venture, working for equity instead of cash.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all group">
+          <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+            <svg class="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Technical Co-Founder</h3>
+          <p class="text-gray-400">
+            We become your technical co-founder, handling all software development, architecture, and technical decisions while you focus on your domain expertise.
+          </p>
+        </div>
+        
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all group">
+          <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+            <svg class="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Equity-Based Development</h3>
+          <p class="text-gray-400">
+            No upfront costs. We invest our expertise and resources in exchange for equity, aligning our success with yours from day one.
+          </p>
+        </div>
+        
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all group">
+          <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+            <svg class="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Full Team Support</h3>
+          <p class="text-gray-400">
+            Access our entire team of developers, designers, and growth experts. Scale your technical capabilities without the hiring overhead.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investors Section -->
+  <section id="investors" class="py-24 bg-black">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          For Strategic <span class="text-[#D4AF37]">Investors</span>
+        </h2>
+        <p class="text-lg text-gray-400">
+          Invest in a portfolio of ventures backed by proven technical execution. We derisk early-stage investments by providing the technical foundation every startup needs.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="text-6xl font-playfair text-[#D4AF37] mb-4">12+</div>
+          <h3 class="text-xl font-semibold mb-2">Ventures Launched</h3>
+          <p class="text-gray-400">Successfully built and scaled technical platforms across industries</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl font-playfair text-[#D4AF37] mb-4">85%</div>
+          <h3 class="text-xl font-semibold mb-2">Success Rate</h3>
+          <p class="text-gray-400">Of our ventures reach profitability within 18 months</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl font-playfair text-[#D4AF37] mb-4">$2M+</div>
+          <h3 class="text-xl font-semibold mb-2">Development Value</h3>
+          <p class="text-gray-400">Average technical investment per venture</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl font-playfair text-[#D4AF37] mb-4">3x</div>
+          <h3 class="text-xl font-semibold mb-2">Faster to Market</h3>
+          <p class="text-gray-400">Compared to traditional technical hiring</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Companies Section -->
+  <section id="companies" class="py-24 bg-[#0A0A0A]">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          Portfolio <span class="text-[#D4AF37]">Companies</span>
+        </h2>
+        <p class="text-lg text-gray-400">
+          We've partnered with domain experts to build successful tech companies across diverse industries.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all">
+          <h3 class="text-2xl font-semibold mb-2">HealthTech Venture</h3>
+          <p class="text-[#D4AF37] text-sm mb-4">Healthcare • SaaS</p>
+          <p class="text-gray-400 mb-6">
+            Partnered with healthcare professionals to build a patient management platform now serving 500+ clinics.
+          </p>
+          <div class="flex items-center text-sm text-gray-500">
+            <span class="mr-4">Founded 2022</span>
+            <span>Series A</span>
+          </div>
+        </div>
+        
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all">
+          <h3 class="text-2xl font-semibold mb-2">FinTech Platform</h3>
+          <p class="text-[#D4AF37] text-sm mb-4">Finance • API</p>
+          <p class="text-gray-400 mb-6">
+            Built with finance experts to create an automated compliance platform for small banks.
+          </p>
+          <div class="flex items-center text-sm text-gray-500">
+            <span class="mr-4">Founded 2021</span>
+            <span>Profitable</span>
+          </div>
+        </div>
+        
+        <div class="bg-black border border-white/10 p-8 hover:border-[#D4AF37]/50 transition-all">
+          <h3 class="text-2xl font-semibold mb-2">EdTech Solution</h3>
+          <p class="text-[#D4AF37] text-sm mb-4">Education • Mobile</p>
+          <p class="text-gray-400 mb-6">
+            Collaborated with educators to develop an adaptive learning platform for K-12 students.
+          </p>
+          <div class="flex items-center text-sm text-gray-500">
+            <span class="mr-4">Founded 2023</span>
+            <span>Seed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-black">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          The <span class="text-[#D4AF37]">Awasero</span> Way
+        </h2>
+        <p class="text-lg text-gray-400">
+          We believe the best companies are built at the intersection of deep domain expertise and exceptional technical execution.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+          <p class="text-gray-400 mb-6">
+            To democratize tech entrepreneurship by removing the technical barriers that prevent domain experts from building transformative companies.
+          </p>
+          <p class="text-gray-400">
+            We partner exclusively with non-technical founders who have deep industry knowledge and a clear vision for solving real problems.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Our Approach</h3>
+          <p class="text-gray-400 mb-6">
+            We don't just build software – we build companies. Our equity-based model ensures we're fully invested in your success.
+          </p>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start">
+              <span class="text-[#D4AF37] mr-2">•</span>
+              Strategic technical architecture
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#D4AF37] mr-2">•</span>
+              Rapid MVP development and iteration
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#D4AF37] mr-2">•</span>
+              Scalable infrastructure from day one
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#D4AF37] mr-2">•</span>
+              Ongoing technical leadership
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-semibold text-center mb-12">Leadership Team</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] rounded-full mx-auto mb-4"></div>
+            <h4 class="text-xl font-semibold mb-2">Sarah Chen</h4>
+            <p class="text-[#D4AF37] text-sm mb-2">CEO & Founding Partner</p>
+            <p class="text-gray-400 text-sm">
+              15+ years building venture-backed startups. Previously CTO at two unicorns.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] rounded-full mx-auto mb-4"></div>
+            <h4 class="text-xl font-semibold mb-2">Marcus Rodriguez</h4>
+            <p class="text-[#D4AF37] text-sm mb-2">CTO & Founding Partner</p>
+            <p class="text-gray-400 text-sm">
+              Former Google engineer. Expert in scalable architecture and AI/ML systems.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] rounded-full mx-auto mb-4"></div>
+            <h4 class="text-xl font-semibold mb-2">Alex Thompson</h4>
+            <p class="text-[#D4AF37] text-sm mb-2">VP of Ventures</p>
+            <p class="text-gray-400 text-sm">
+              Serial entrepreneur with 3 successful exits. Specializes in go-to-market strategy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-24 bg-[#0A0A0A] border-t border-white/10">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          Ready to Build Your <span class="text-[#D4AF37]">Vision?</span>
+        </h2>
+        <p class="text-lg text-gray-400 mb-8">
+          Join the growing community of non-technical founders who are building successful tech companies with Awasero.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="mailto:partners@awasero.com" class="px-8 py-4 bg-[#D4AF37] text-black font-medium hover:bg-[#B8941F] transition-all transform hover:scale-105">
+            Apply as Partner
+          </a>
+          <a href="mailto:invest@awasero.com" class="px-8 py-4 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
+            Investor Relations
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-black border-t border-white/10">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-playfair text-2xl text-[#D4AF37] mb-4">awasero</h3>
+          <p class="text-gray-400 text-sm">
+            Venture software house enabling non-technical founders to build tech companies.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#about" class="hover:text-[#D4AF37] transition-colors">About Us</a></li>
+            <li><a href="#companies" class="hover:text-[#D4AF37] transition-colors">Portfolio</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Founder's Guide</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Case Studies</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">FAQ</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Twitter</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
+        <p>&copy; 2024 Awasero. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
